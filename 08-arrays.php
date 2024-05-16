@@ -81,5 +81,4 @@ $equipos = array_merge($equipo1,$equipo2);
 foreach($equipos as $key=>$equipo) {
     echo $equipo."\n";
 }
-
 ?>

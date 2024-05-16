@@ -9,5 +9,5 @@
     echo "El producto de $numero1 x $numero2 es $resultado \n";
 
     $resultado = dividir ($numero1,$numero2);
-    echo "La division de ".$numero1." / ".$numero2." es ".$resultado;
+    echo "La division de ".$numero1." / ".$numero2." es ".$resultado;   
 ?>
