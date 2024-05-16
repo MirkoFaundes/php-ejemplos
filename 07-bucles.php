@@ -22,3 +22,15 @@
     }
 
     echo "El numero mayor es :".$mayor;
+
+        //logica que me permita dar el menor de 5 numeros
+        $menor = PHP_INT_MAX;
+        for($i = 1; $i <= 5; $i++) {
+            echo "Ingrese un numero : ";
+            $numero = fgets(STDIN);
+            if($menor > $numero) {
+                $menor = $numero;
+            }
+        }
+    
+        echo "El numero menor es: " . $menor;
