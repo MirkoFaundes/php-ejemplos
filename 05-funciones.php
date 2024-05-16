@@ -27,5 +27,7 @@ echo obtenerSaludo("Mirko")."\n";
 echo mostrarDatos("Mirko","Faundes",
 "Backend developer web","tercer semestre")."\n";
 echo "El total de la suma es : ".calcular("+",10,34);
+echo mostrarDatos("Mirko","Faundes",
+"backend developer web",obtenerSaludo("semestre"))."\n";
 
 ?>
