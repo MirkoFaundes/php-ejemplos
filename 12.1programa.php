@@ -69,7 +69,7 @@
             break;
 
         case 6:
-            echo "ESCRIBA EL PRIMER NUMERO:";
+            echo "ESCRIBA EL NUMERO:";
             $numero1 = fgets (STDIN);
             $calculadora = new Calculadora($numero1);
             $resultado = $calculadora->raiz();

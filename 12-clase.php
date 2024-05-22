@@ -1,6 +1,6 @@
 <?php
     //realizar una clase calculadora que tenga dos propiedades que represente los dos numeros a ingresar y
-    //6 metodos matematicos que debera tener : sumar,restar,mupltiplicar,dividir,potencia,raiz
+    //6 metodos matematicos que debera tener : sumar, restar, mupltiplicar, dividir, potencia, raiz
 
     class Calculadora {
 
