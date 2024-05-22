@@ -10,9 +10,13 @@
     echo "******** POTENCIA (OPCION 5) ********\n";
     echo "******** RAIZ (OPCION 6) ********\n";
     echo "******** SALIR (OPCION 0) ********\n";
-    echo "INGRESE LA OPCION :";
-    $opcion =fgets(STDIN);
-    switch ($opcion) {
+    
+    do
+    {
+        echo "INGRESE LA OPCION :";
+        $opcion =fgets(STDIN);
+        switch ($opcion) {
+
         case 1:
             echo "ESCRIBA EL PRIMER NUMERO:";
             $numero1 = fgets (STDIN);
@@ -84,8 +88,14 @@
                 # code...
                 break;
 
+        }
+
+         if($opcion == 0) break;
+         echo "\n Desea continuar ? (1=Si/0=No) :";
+         $rpta = fgets(STDIN);
+
+
     }
-
-
+    while($rpta==1);
 
     ?>
