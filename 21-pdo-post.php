@@ -28,6 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "Todos los campos son obligatorios.";
     }
 
+    if ($talla <=0 || $talla >= 250) {
+        echo "Ingrese un valor valido (0 a 250)";
+    }
+
     if($tos == 1 || $fiebre == 1 || $disnea == 1 || $dolor_muscular == 1 || $gripe == 1 || $presion_alta == 1 || $fatiga == 1 || $garraspera == 1) {
         $resultado = "1";
     }
@@ -43,13 +47,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
 
         $conn->beginTransaction();
-        $sql="INSERT INTO `pacients` (`nombres`, `apellidos`, `edad`, `talla_m`,
-        `peso_kg`, `sintoma_tos`, `sintoma_fiebre`, `sintoma_disnea`, `sintoma_dolor_muscular`,
+        $sql="INSERT INTO `pacientes` (`nombres`, `apellidos`, `edad`, `talla_m`,
+        `peso_kg`, `sintoma_tos`, `sintoma_fiebre`, `sintoma_disnea`, `sintoma_dolormuscular`,
         `sintoma_gripe`, `sintoma_presionalta`, `sintoma_fatiga`, `sintoma_garraspera`,
         `ultima_fecha_vacunacion`, `resultado`)
         VALUES ('$nombre', '$apellido', '$edad', '$talla', '$peso',
         '$tos', '$fiebre', '$disnea', '$dolor_muscular', '$gripe'
-        ,'$presion_alta', '$fatiga', '$garraspera', '$fecha', '$resultado',);";
+        ,'$presion_alta', '$fatiga', '$garraspera', '$fecha', '$resultado');";
 
     $conn->exec($sql);
     $conn->commit();
