@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "Todos los campos son obligatorios.";
     }
 
-    if ($talla <=0 || $talla >= 250) {
+    if ($talla <0 || $talla > 250) {
         echo "Ingrese un valor valido (0 a 250)";
     }
 
