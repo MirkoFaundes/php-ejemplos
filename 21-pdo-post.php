@@ -6,21 +6,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $talla = $_POST['talla'];
     $peso = $_POST['peso'];
 
-    $tos = array_key_exists("tos",$POST) ? $_POST['tos'] : "0";
+    $tos = array_key_exists("tos",$_POST) ? $_POST['tos'] : "0";
     $tos = $tos == "" ? "0" : $tos;
-    $fiebre = array_key_exists("fiebre",$POST) ? $_POST['fiebre'] : "0";
+    $fiebre = array_key_exists("fiebre",$_POST) ? $_POST['fiebre'] : "0";
     $fiebre = $fiebre == "" ? "0" : $fiebre;
-    $disnea = array_key_exists("disnea",$POST) ? $_POST['disnea'] : "0";
+    $disnea = array_key_exists("disnea",$_POST) ? $_POST['disnea'] : "0";
     $disnea = $disnea == "" ? "0" : $disnea;
-    $dolor_muscular = array_key_exists("dolor_muscular",$POST) ? $_POST['dolor_muscular'] : "0";
+    $dolor_muscular = array_key_exists("dolor_muscular",$_POST) ? $_POST['dolor_muscular'] : "0";
     $dolor_muscular = $dolor_muscular == "" ? "0" : $dolor_muscular;
-    $gripe = array_key_exists("gripe",$POST) ? $_POST['gripe'] : "0";
+    $gripe = array_key_exists("gripe",$_POST) ? $_POST['gripe'] : "0";
     $gripe = $gripe == "" ? "0" : $gripe;
-    $presion_alta = array_key_exists("presion_alta",$POST) ? $_POST['presion_alta'] : "0";
+    $presion_alta = array_key_exists("presion_alta",$_POST) ? $_POST['presion_alta'] : "0";
     $presion_alta = $presion_alta == "" ? "0" : $presion_alta;
-    $fatiga = array_key_exists("fatiga",$POST) ? $_POST['fatiga'] : "0";
+    $fatiga = array_key_exists("fatiga",$_POST) ? $_POST['fatiga'] : "0";
     $fatiga = $fatiga == "" ? "0" : $fatiga;
-    $garraspera = array_key_exists("garraspera",$POST) ? $_POST['garraspera'] : "0";
+    $garraspera = array_key_exists("garraspera",$_POST) ? $_POST['garraspera'] : "0";
     $garraspera = $garraspera == "" ? "0" : $garraspera;
     $fecha = $_POST['fecha'];
 
