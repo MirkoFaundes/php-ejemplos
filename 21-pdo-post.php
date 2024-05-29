@@ -28,16 +28,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "Todos los campos son obligatorios.";
     }
 
-    if ($talla <0 || $talla > 250) {
-        echo "Ingrese un valor valido (0 a 250)";
-    }
-
     if($tos == 1 || $fiebre == 1 || $disnea == 1 || $dolor_muscular == 1 || $gripe == 1 || $presion_alta == 1 || $fatiga == 1 || $garraspera == 1) {
         $resultado = "1";
     }
     else {
         $resultado = "0";
     }
+
+    if ($talla <0 || $talla > 250) {
+        echo "Ingrese un valor valido de talla (0 a 250)";
+    }
+
+    else{
 
     $servername = "localhost";
     $username = "root";
@@ -55,13 +57,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         '$tos', '$fiebre', '$disnea', '$dolor_muscular', '$gripe'
         ,'$presion_alta', '$fatiga', '$garraspera', '$fecha', '$resultado');";
 
-    $conn->exec($sql);
-    $conn->commit();
-    echo "Fue registrado correctamente.";
+        $conn->exec($sql);
+        $conn->commit();
+        echo "Fue registrado correctamente.";
     }
-    catch(Exception $e) {
+        catch(Exception $e) {
         echo "Error : ".$e->getMessage();
+     }
+     
+
     }
+
+
 
 }
 
