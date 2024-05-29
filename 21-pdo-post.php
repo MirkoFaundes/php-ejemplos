@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $servername = "localhost";
     $username = "root";
     $password = "root";
-    $sbname = "covid";
+    $dbname = "covid";
     try{
         $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
 
