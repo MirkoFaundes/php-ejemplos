@@ -11,7 +11,7 @@
     <input type = "text" placeholder="Escribe aqui" name="nombre" id = "nombre" /><br>
     <label id="tos" name="tos">Tos</label><input type="checkbox" for="tos">
     <button type="button" onclick="buscarPaciente();">Buscar</button>
-    <table style="border: 1px solid black;"> 
+    <table style="border: 1px solid black;" id="tabla"> 
         <tr>
             <td>Paciente</td>
             <td>Edad</td>
@@ -25,8 +25,8 @@
         </tr>
     </table>
     <!-- </form> -->
-    <script type="text/javascript">
-    src="https://code.jquery.com/jquery-3.7.1.min.js"</script>
+    <script type="text/javascript"
+    src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="25.1-ajax.js"></script>
 </body>
 </html>
