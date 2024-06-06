@@ -12,6 +12,8 @@
     <!-- <form action="22.1-consulta-pdo.php" method="POST"> -->
     <input type="text" placeholder="Escribe aqui" name="nombre" id="nombre" /><br>
     <label id="tos" name="tos">Tos</label><input type="checkbox" for="tos">
+    <label id="fiebre" name="fiebre">Fiebre</label><input type="checkbox" for="fiebre">
+    <label id="disnea" name="disnea">Disnea</label><input type="checkbox" for="disnea">
     <button type="button" onclick="buscarPacientes();">Buscar</button>
     <table style="border: 1px solid black;" id="tabla">
         <tr>
@@ -46,11 +48,21 @@
                 <div class="modal-body">
                     <label for="name" class="form-label">Nombre:</label>
                     <input type="text" class="form-control" id="name" name="name"/>
-                </div>
+                    <label for="age" class="form-label">Edad</label>
+                    <input type="text" class="form-control" id="age" name="age"/>
+                    <label for="height" class="form-label">Talla</label>
+                    <input type="text" class="form-control" id="height" name="height"/>
+                    <label for="weight" class="form-label">Peso</label>
+                    <input type="text" class="form-control" id="weight" name="weight"/>
+
+                    <label for="name" class="form-label">tos</label>
+                    <input type="text" class="form-control" id="tos2 " name="tos2"/>
+                    
+                    <button type="button" class="btn-accept" onclink="actualizar()">Guardar</button>
+                </div
             </div>
         </div>
     </div>
 </center>
 </body>
 </html>
- 

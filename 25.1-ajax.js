@@ -31,7 +31,7 @@ function agregarFilas(id,paciente) {
     "<td>"+paciente.sintoma_tos+"</td>"+
     "<td>"+paciente.sintoma_fiebre+"</td>"+
     "<td>"+paciente.sintoma_disnea+"</td>"+
-    "<td><button type='button' onclick=editar>Editar</button></td>"+
+    "<td><button type='button' onclick = editar('"+paciente.nombres+"','"+paciente.edad+"','"+paciente.talla_m+"','"+paciente.peso_kg+"','"+paciente.sintoma_tos+"','"+paciente.sintoma_fiebre+"','"+paciente.sintoma_disnea+"');>Editar</button></td>"+
     "</tr>";
     $(id +" tr:last").after(html);
 }
@@ -45,4 +45,27 @@ function editar(nombres,edad) {
     $("#nombre2").val(sintoma_tos);
     $("#nombre2").val(sintoma_fiebre);
     $("#nombre2").val(sintoma_disnea);
+}
+
+function actualizar() {
+    const $nombre = $("#nombre2").val();
+   
+    let datos ={
+        nombre : $nombre
+    };
+    $.ajax({
+        url :"26.1-update-ajax-pdo.php",
+        type : "post",
+        data : datos,
+        success : function(result) {              
+            alert("Se guardo los datos correctamente de "+result);            
+        }
+    })
+ 
+ 
+    return;
+}
+ 
+function cancelar() {
+    $('#exampleModal').modal('hide');    
 }
