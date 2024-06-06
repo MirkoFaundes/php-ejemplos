@@ -31,7 +31,7 @@ function agregarFilas(id,paciente) {
     "<td>"+paciente.sintoma_tos+"</td>"+
     "<td>"+paciente.sintoma_fiebre+"</td>"+
     "<td>"+paciente.sintoma_disnea+"</td>"+
-    "<td><button type='button'>Editar</button></td>"+
+    "<td><button type='button' onclick=editar>Editar</button></td>"+
     "</tr>";
     $(id +" tr:last").after(html);
 }
