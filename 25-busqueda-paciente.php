@@ -46,19 +46,20 @@
                     aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <label for="name" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="name" name="name"/>
-                    <label for="age" class="form-label">Edad</label>
-                    <input type="text" class="form-control" id="age" name="age"/>
-                    <label for="height" class="form-label">Talla</label>
-                    <input type="text" class="form-control" id="height" name="height"/>
-                    <label for="weight" class="form-label">Peso</label>
-                    <input type="text" class="form-control" id="weight" name="weight"/>
+                     <label for="name" class="form-label">Nombre:</label>
+                     <input type="text" class="form-control" id="name" name="name"/>
+                     <label for="age" class="form-label">Edad</label>
+                     <input type="text" class="form-control" id="age" name="age"/>
+                     <label for="height" class="form-label">Talla</label>
+                     <input type="text" class="form-control" id="height" name="height"/>
+                     <label for="weight" class="form-label">Peso</label>
+                     <input type="text" class="form-control" id="weight" name="weight"/>
 
-                    <label for="name" class="form-label">tos</label>
-                    <input type="text" class="form-control" id="tos2 " name="tos2"/>
-                    
-                    <button type="button" class="btn-accept" onclink="actualizar()">Guardar</button>
+                     <label id="tos2" name="tos2">Tos</label><input type="checkbox" for="tos2">
+                     <label id="fiebre2" name="fiebre2">Fiebre</label><input type="checkbox" for="fiebre2">
+                     <label id="disena2" name="disnea2">Disnea</label><input type="checkbox" for="disnea2"><br>
+                     <button type="button" class="btn-accept" onclick="actualizar()">Guardar</button>
+                     <button type="button" class="btn-delete" onclick="eliminar()">Eliminar</button>
                 </div
             </div>
         </div>
